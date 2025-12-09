@@ -1,37 +1,28 @@
 import 'package:flutter/widgets.dart';
 import 'custom_button.dart';
-import 'custom_input.dart';
-import 'pokedex_screen.dart';
+import 'login.dart';
+import 'sign_up.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final emailCtrl = TextEditingController();
-    final passCtrl = TextEditingController();
-
-    return Padding(
-      padding: const EdgeInsets.all(30),
+    return Center(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
         children: [
-          CustomInput(
-            text: "",
-            label: "Correo",
-            controller: emailCtrl,
-          ),
-          CustomInput(
-            text: "",
-            label: "Contraseña",
-            controller: passCtrl,
-            isPassword: true,
+          CustomButton(
+            texto: "Login",
+            onPressed: () {
+              Navigator.push(context, _slide(const LoginScreen()));
+            },
           ),
           const SizedBox(height: 20),
           CustomButton(
-            texto: "Entrar",
+            texto: "Signup",
             onPressed: () {
-              Navigator.push(context, _slide(const PokedexScreen()));
+              Navigator.push(context, _slide(const SignUpScreen()));
             },
           ),
         ],
@@ -50,3 +41,4 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
+
