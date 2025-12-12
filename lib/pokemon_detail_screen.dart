@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'pokemon_list.dart';
-import 'package:flutter/material.dart';
 
 
 class PokemonDetailScreen extends StatelessWidget {

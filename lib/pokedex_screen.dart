@@ -3,6 +3,7 @@ import 'pokemon_list.dart';
 import 'pokemon_card.dart';
 import 'pokemon_detail_screen.dart';
 
+
 class PokedexScreen extends StatefulWidget {
   const PokedexScreen({super.key});
 
