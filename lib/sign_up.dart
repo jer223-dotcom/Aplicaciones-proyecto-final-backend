@@ -28,7 +28,7 @@ class _SignupPageState extends State<SignupPage> {
     final data = jsonDecode(response.body);
 
     if (response.statusCode == 200 && data["status"] == "ok") {
-      // ÉXITO
+      
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text("Registro exitoso"),
@@ -36,11 +36,11 @@ class _SignupPageState extends State<SignupPage> {
         ),
       );
 
-      // Ir al login
+      
       Navigator.pushNamed(context, "/login");
 
     } else {
-      // ERROR
+
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(data["message"] ?? "Error al registrarse"),

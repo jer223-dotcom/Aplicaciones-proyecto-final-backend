@@ -20,7 +20,7 @@ class _PokedexScreenState extends State<PokedexScreen> {
       padding: const EdgeInsets.all(20),
       child: Column(
         children: [
-          // Barra de búsqueda
+          
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
             decoration: BoxDecoration(

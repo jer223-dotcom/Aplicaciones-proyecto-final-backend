@@ -5,7 +5,7 @@ import 'sign_up.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  // Animación simple de transición
+  
   Route _slide(Widget page) {
     return PageRouteBuilder(
       pageBuilder: (_, __, ___) => page,

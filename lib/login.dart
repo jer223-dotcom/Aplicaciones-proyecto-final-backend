@@ -12,9 +12,9 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController passwordController = TextEditingController();
 
   Future<void> login() async {
-    print("LOGIN PRESIONADO"); // ← prueba 1
+    print("LOGIN PRESIONADO"); 
 
-    final url = Uri.parse("http://192.168.1.72:3000/login"); // usa tu IP LAN
+    final url = Uri.parse("http://192.168.1.72:3000/login"); 
 
     final response = await http.post(
       url,
@@ -53,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    print("PANTALLA LOGIN CARGADA"); // ← prueba 2
+    print("PANTALLA LOGIN CARGADA"); 
 
     return Scaffold(
       body: Column(
@@ -61,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
           TextField(controller: emailController),
           TextField(controller: passwordController, obscureText: true),
           ElevatedButton(
-            onPressed: login, // ← ejecuta la función
+            onPressed: login, 
             child: const Text("Iniciar sesión"),
           ),
         ],
